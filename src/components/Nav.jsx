@@ -16,11 +16,11 @@ export const Nav = () => {
     <React.Fragment>
       <div className="topnav" id="myTopnav">
         <a href="/" className="active">
-          Home
+          HOME
         </a>
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-        <a href="/search">Search</a>
+        <a href="#news">NEWS</a>
+        <a href="#contact">CONTACT</a>
+        <a href="/search">SEARCH</a>
         <a href="/#" className="icon" onClick={handleClick}>
           <i className="fa fa-bars"></i>
         </a>

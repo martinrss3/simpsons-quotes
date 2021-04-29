@@ -10,10 +10,10 @@
 
 input {
   background-color: transparent;
-  border: 0px solid;
   font-size: 3rem;
   text-align: center;
   text-transform: uppercase;
+  border: 0 solid;
   border-bottom: 1px solid black;
 }
 
@@ -30,7 +30,7 @@ input:focus::placeholder {
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: auto;
   grid-gap: 1rem;
-  margin-bottom: 100px
+  margin-bottom: 5em;
 }
 
 li {
@@ -38,48 +38,52 @@ li {
 }
 
 .card {
-  position: relative;
   width: 315px;
   height: 450px;
-  margin: 30px auto;
+  position: relative;
+  margin: 2em auto;
   box-shadow: 0 0 100px rgba(0, 0, 0, 0.3);
 }
 
 .card-header {
-  position: relative;
   height: 250px;
-  background-size: cover;
-  background-position: top;
+  position: relative;
+  background-size: contain;
+  background-position: center;
   background-repeat: no-repeat;
 }
 
 .card-header:after {
   content: "";
-  position: absolute;
   width: 100%;
-  height: 100%;
+  height: 5px;
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 40, 218, 1) 0%,
+    rgba(0, 212, 255, 0.38139005602240894) 100%
+  );
 }
 
 .card-body {
   text-align: center;
 }
 
-.name {
-  font-size: 20px;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-top: 20px;
-}
-
-.title-quote {
-  font-size: 14px;
-  font-weight: 300;
-  margin-top: 10px;
-}
-
 .quote {
-  font-size: 14px;
-  font-weight: 300;
-  margin: 10px auto;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 1.5em 1em;
   line-height: 20px;
+  font-style: italic;
+}
+
+.name {
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: right;
+  text-transform: uppercase;
+  margin-top: 1em;
+  margin-right: 1.5em;
 }
