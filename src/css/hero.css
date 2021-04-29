@@ -1,0 +1,53 @@
+@font-face {
+  font-family: "Simpsons";
+  src: url("../fonts/Simpsonfont.ttf") format("truetype");
+}
+
+.hero {
+  z-index: 1;
+  height: 100vh;
+  margin-top: -70px;
+  background-image: url("../img/sky.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bart {
+  position: fixed;
+  top: 150%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.hero-title {
+  font-family: Simpsons, sans-serif;
+  font-size: 8rem;
+  line-height: 150px;
+  color: #eecc0b;
+}
+
+.hero-text button {
+  position: fixed;
+  top: 125%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  border: 2px solid black;
+  border-radius: 10px;
+  outline: 0;
+  display: inline-block;
+  padding: 10px 25px;
+  text-align: center;
+  cursor: pointer;
+  background: none;
+}
