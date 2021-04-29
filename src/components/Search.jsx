@@ -31,7 +31,7 @@ export const Search = () => {
 
   return (
     <React.Fragment>
-      <div style={{ margin: 60 }}>
+      <div style={{ marginTop: 100 }}>
         <input
           className="input-search"
           type="text"
@@ -52,9 +52,8 @@ export const Search = () => {
               ></div>
 
               <div className="card-body">
-                <h2 className="name">{item.character}</h2>
-                <h4 className="title-quote">Quote:</h4>
-                <div className="quote">{item.quote}</div>
+                <div className="quote">"{item.quote}"</div>
+                <h2 className="name">- {item.character}</h2>
               </div>
             </div>
           </div>

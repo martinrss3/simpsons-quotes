@@ -23,7 +23,7 @@ export const Hero = () => {
       <div className="hero-text">
         <h1 className="hero-title">The Simpsons</h1>
         <Link to="/search">
-          <button style={{ fontSize: "1.3rem" }}>Search Quotes!</button>
+          <button style={{ fontSize: "1.3rem" }}>SEARCH QUOTES</button>
         </Link>
       </div>
     </div>
