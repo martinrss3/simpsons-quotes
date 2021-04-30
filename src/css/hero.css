@@ -15,7 +15,7 @@
 .bart {
   position: fixed;
   top: 150%;
-  left: 50%;
+  left: 30%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
@@ -31,13 +31,10 @@
 
 .hero-title {
   font-family: Simpsons, sans-serif;
-  font-size: 8rem;
-  line-height: 150px;
   color: #eecc0b;
 }
 
-.hero-text button {
-  padding: 50px;
+.button-search {
   width: 250px;
   height: 70px;
   margin: 2em auto;
@@ -49,10 +46,39 @@
   text-align: center;
   cursor: pointer;
   background: none;
+  font-weight: bold;
 }
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+/* Extra small devices (phones, 599px and down) */
+@media only screen and (max-width: 599px) {
+  .hero {
+    background-position: top;
+    margin-top: 0;
+  }
+
+  .bart {
+    width: 80vw;
+    left: 50%;
+  }
+
+  .hero-title {
+    font-size: 4rem;
+    line-height: 90px;
+    margin-bottom: 1.5em;
+  }
+
+  .hero-text {
+    position: relative;
+  }
+
+  .button-search {
+    width: 65vw;
+    height: 6vh;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
   .hero {
     background-position: top;
     margin-top: 0;
@@ -63,24 +89,58 @@
   }
 
   .hero-title {
-    font-size: 5rem;
-    line-height: 90px;
+    font-size: 7rem;
+    line-height: 120px;
     margin-bottom: 1.5em;
   }
 
   .hero-text {
     position: relative;
   }
+
+  .button-search {
+    width: 40vw;
+    height: 5vh;
+  }
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-/* @media only screen and (min-width: 600px) {...} */
-
 /* Medium devices (landscape tablets, 768px and up) */
-/* @media only screen and (min-width: 768px) {...} */
+@media only screen and (min-width: 768px) {
+  .bart {
+    top: 100%;
+    left: 50%;
+  }
+}
 
 /* Large devices (laptops/desktops, 992px and up) */
-/* @media only screen and (min-width: 992px) {...} */
+@media only screen and (min-width: 992px) {
+  .hero-title {
+    font-size: 7rem;
+    line-height: 120px;
+    margin-top: 1em;
+  }
+}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-/* @media only screen and (min-width: 1200px) {...} */
+@media only screen and (min-width: 1200px) {
+  .hero {
+    margin-top: -120px;
+  }
+
+  .bart {
+    width: 50vw;
+    top: 200%;
+  }
+
+  .hero-title {
+    font-size: 8rem;
+    line-height: 150px;
+    margin-top: 1em;
+    margin-bottom: 0;
+  }
+
+  .button-search {
+    width: 225px;
+    height: 50px;
+  }
+}
