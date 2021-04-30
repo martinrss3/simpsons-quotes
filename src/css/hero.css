@@ -6,23 +6,32 @@
 .hero {
   z-index: 1;
   height: 100vh;
+  position: relative;
   margin-top: -70px;
   background-image: url("../img/sky.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 .bart {
-  position: fixed;
+  z-index: -1;
+  position: absolute;
   top: 150%;
   left: 30%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
+.cut-out-bart {
+  position: absolute;
+  right: -10px;
+  bottom: 0;
+}
+
 .hero-text {
   position: absolute;
-  top: 50%;
+  top: 20%;
   left: 50%;
   text-align: center;
   transform: translate(-50%, -50%);
@@ -32,21 +41,6 @@
 .hero-title {
   font-family: Simpsons, sans-serif;
   color: #eecc0b;
-}
-
-.button-search {
-  width: 250px;
-  height: 70px;
-  margin: 2em auto;
-  border: 0.2em solid black;
-  border-radius: 10px;
-  outline: 0;
-  display: inline-block;
-  padding: 10px 25px;
-  text-align: center;
-  cursor: pointer;
-  background: none;
-  font-weight: bold;
 }
 
 /* Extra small devices (phones, 599px and down) */
@@ -61,19 +55,18 @@
     left: 50%;
   }
 
+  .cut-out-bart {
+    height: 70vh;
+  }
+
   .hero-title {
-    font-size: 4rem;
+    font-size: 3.5rem;
     line-height: 90px;
     margin-bottom: 1.5em;
   }
 
   .hero-text {
     position: relative;
-  }
-
-  .button-search {
-    width: 65vw;
-    height: 6vh;
   }
 }
 
@@ -86,6 +79,11 @@
 
   .bart {
     width: 80vw;
+    left: 50%;
+  }
+
+  .cut-out-bart {
+    height: 70vh;
   }
 
   .hero-title {
@@ -96,11 +94,6 @@
 
   .hero-text {
     position: relative;
-  }
-
-  .button-search {
-    width: 40vw;
-    height: 5vh;
   }
 }
 
@@ -119,16 +112,20 @@
     line-height: 120px;
     margin-top: 1em;
   }
+
+  .bart {
+    width: 50vw;
+  }
+
+  .cut-out-bart {
+    height: 80vh;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-  .hero {
-    margin-top: -120px;
-  }
-
   .bart {
-    width: 50vw;
+    width: 45vw;
     top: 200%;
   }
 
@@ -137,10 +134,5 @@
     line-height: 150px;
     margin-top: 1em;
     margin-bottom: 0;
-  }
-
-  .button-search {
-    width: 225px;
-    height: 50px;
   }
 }
