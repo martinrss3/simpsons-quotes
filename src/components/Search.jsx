@@ -13,7 +13,7 @@ export const Search = () => {
     axios
       .get(url)
       .then((res) => {
-        console.log(res);
+        // console.log(res);
         setAllData(res.data);
       })
       .catch((err) => {
