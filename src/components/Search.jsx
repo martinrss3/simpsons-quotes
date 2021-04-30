@@ -31,7 +31,7 @@ export const Search = () => {
 
   return (
     <React.Fragment>
-      <div style={{ marginTop: 100 }}>
+      <div className="input-container">
         <input
           className="input-search"
           type="text"
