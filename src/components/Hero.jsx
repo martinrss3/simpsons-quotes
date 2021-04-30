@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import gsap from "gsap";
+import gsap, { Bounce } from "gsap";
 import FallingBart from "../img/falling-bart.png";
 import "../css/hero.css";
 
@@ -15,6 +15,8 @@ export const Hero = () => {
     tl.from(".bart", 2, {
       y: -2000,
     });
+
+    gsap.from("button", 1.5, { delay: 2, scale: 0, ease: Bounce.easeOut });
   }, []);
 
   return (

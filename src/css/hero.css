@@ -38,8 +38,6 @@
 
 .hero-text button {
   padding: 50px;
-  background-color: green;
-  transition: transform 0.2s;
   width: 250px;
   height: 70px;
   margin: 2em auto;
@@ -51,9 +49,4 @@
   text-align: center;
   cursor: pointer;
   background: none;
-  transition: transform 0.2s;
-}
-
-.hero-text button:hover {
-  transform: scale(1.1);
 }
