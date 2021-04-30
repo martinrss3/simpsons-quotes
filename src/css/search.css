@@ -1,11 +1,5 @@
-.input-search {
-  width: 70vw;
-  height: 100px;
-  position: relative;
-  top: 10%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+*:focus {
+  outline: none;
 }
 
 input {
@@ -17,12 +11,22 @@ input {
   border-bottom: 1px solid black;
 }
 
-*:focus {
-  outline: none;
-}
-
 input:focus::placeholder {
   color: transparent;
+}
+
+li {
+  list-style-type: none;
+}
+
+.input-search {
+  width: 70vw;
+  height: 100px;
+  position: relative;
+  top: 10%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .cards {
@@ -31,10 +35,6 @@ input:focus::placeholder {
   grid-auto-rows: auto;
   grid-gap: 1rem;
   margin-bottom: 5em;
-}
-
-li {
-  list-style-type: none;
 }
 
 .card {
