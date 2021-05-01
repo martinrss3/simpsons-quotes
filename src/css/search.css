@@ -33,6 +33,20 @@ li {
   transform: translate(-50%, -50%);
 }
 
+.loading  {
+  height: 20vh;
+  position: relative;
+  margin: 0 auto;
+}
+
+.fa-spinner {
+  position: relative;
+  top: 10%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
 .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -115,7 +129,7 @@ li {
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 600px) {
   .input-container {
     margin-top: 60px;
   }

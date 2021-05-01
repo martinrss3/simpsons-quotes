@@ -6,6 +6,7 @@ export const Search = () => {
   const [allData, setAllData] = useState([]);
   const [search, setSearch] = useState("");
   const [filteredData, setFilteredData] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   const url = "https://thesimpsonsquoteapi.glitch.me/quotes?count=15";
 
@@ -13,8 +14,8 @@ export const Search = () => {
     axios
       .get(url)
       .then((res) => {
-        // console.log(res);
         setAllData(res.data);
+        setIsLoading(false);
       })
       .catch((err) => {
         console.log(err);
@@ -40,25 +41,31 @@ export const Search = () => {
         />
       </div>
 
-      <div className="cards">
-        {filteredData.map((item, idx) => (
-          <div className="card">
-            <div key={idx}>
-              <div
-                className="card-header"
-                style={{
-                  backgroundImage: `url(${item.image})`,
-                }}
-              ></div>
+      {isLoading ? (
+        <div className="loading">
+          <i className="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+        </div>
+      ) : (
+        <div className="cards">
+          {filteredData.map((item, idx) => (
+            <div className="card">
+              <div key={idx}>
+                <div
+                  className="card-header"
+                  style={{
+                    backgroundImage: `url(${item.image})`,
+                  }}
+                ></div>
 
-              <div className="card-body">
-                <div className="quote">"{item.quote}"</div>
-                <h2 className="name">- {item.character}</h2>
+                <div className="card-body">
+                  <div className="quote">"{item.quote}"</div>
+                  <h2 className="name">- {item.character}</h2>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      )}
     </React.Fragment>
   );
 };
