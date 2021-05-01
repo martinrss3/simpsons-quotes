@@ -8,7 +8,9 @@ export const Search = () => {
   const [filteredData, setFilteredData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  const url = "https://thesimpsonsquoteapi.glitch.me/quotes?count=15";
+  const url = "";
+
+  // https://thesimpsonsquoteapi.glitch.me/quotes?count=15
 
   useEffect(() => {
     axios
