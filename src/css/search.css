@@ -33,18 +33,10 @@ li {
   transform: translate(-50%, -50%);
 }
 
-.loading  {
-  height: 20vh;
-  position: relative;
+.loading {
+  height: 10vh;
+  display: table;
   margin: 0 auto;
-}
-
-.fa-spinner {
-  position: relative;
-  top: 10%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
 }
 
 .cards {
