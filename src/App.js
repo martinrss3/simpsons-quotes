@@ -4,6 +4,7 @@ import { Nav } from "../src/components/Nav";
 import { Hero } from "../src/components/Hero";
 import { Footer } from "../src/components/Footer";
 import { Search } from "../src/components/Search";
+import { SimpsonYDalila } from "../src/components/SimpsonYDalila";
 
 import "../src/css/main.css";
 
@@ -18,6 +19,9 @@ export const App = () => {
           </Route>
           <Route exact path="/search">
             <Search />
+          </Route>
+          <Route exact path="/homero-perdido">
+            <SimpsonYDalila />
           </Route>
         </Switch>
         <Footer />
