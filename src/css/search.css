@@ -2,6 +2,10 @@
   outline: none;
 }
 
+.search-wrapper {
+  height: 100vh;
+}
+
 input {
   background-color: transparent;
   font-size: 3rem;
@@ -34,9 +38,18 @@ li {
 }
 
 .loading {
-  height: 10vh;
   display: table;
   margin: 0 auto;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.loading-homer {
+  width: 100%;
+}
+
+.loading-text {
+  padding-top: 30px;
 }
 
 .cards {

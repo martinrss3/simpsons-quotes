@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
+import { Nav } from "../components/Nav";
+import { Footer } from "../components/Footer";
 import axios from "axios";
+import HomeroLoading from "../video/homer-simpsons-monkey.gif";
 import "../css/search.css";
 
 export const Search = () => {
@@ -32,40 +35,47 @@ export const Search = () => {
 
   return (
     <React.Fragment>
-      <div className="input-container">
-        <input
-          className="input-search"
-          type="text"
-          placeholder="search by name character"
-          onChange={(e) => setSearch(e.target.value)}
-        />
-      </div>
-
-      {isLoading ? (
-        <div className="loading">
-          <i className="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+      <div className="search-wrapper">
+        <div className="search- navbar">
+          <Nav />
         </div>
-      ) : (
-        <div className="cards">
-          {filteredData.map((item, idx) => (
-            <div className="card">
-              <div key={idx}>
-                <div
-                  className="card-header"
-                  style={{
-                    backgroundImage: `url(${item.image})`,
-                  }}
-                ></div>
+        <div className="input-container">
+          <input
+            className="input-search"
+            type="text"
+            placeholder="search by name character"
+            onChange={(e) => setSearch(e.target.value)}
+          />
+        </div>
 
-                <div className="card-body">
-                  <div className="quote">"{item.quote}"</div>
-                  <h2 className="name">- {item.character}</h2>
+        {isLoading ? (
+          <div className="loading">
+            <img className="loading-homer" src={HomeroLoading} alt="homero" />
+            <p className="loading-text">Waiting for api response...</p>
+          </div>
+        ) : (
+          <div className="cards">
+            {filteredData.map((item, idx) => (
+              <div className="card">
+                <div key={idx}>
+                  <div
+                    className="card-header"
+                    style={{
+                      backgroundImage: `url(${item.image})`,
+                    }}
+                  ></div>
+
+                  <div className="card-body">
+                    <div className="quote">"{item.quote}"</div>
+                    <h2 className="name">- {item.character}</h2>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
-      )}
+            ))}
+          </div>
+        )}
+        <Footer />
+      </div>
     </React.Fragment>
   );
 };

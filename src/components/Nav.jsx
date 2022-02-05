@@ -18,9 +18,7 @@ export const Nav = () => {
         <a href="/" className="active">
           HOME
         </a>
-        <a href="#news">NEWS</a>
-        <a href="#contact">CONTACT</a>
-        <a href="/search">SEARCH</a>
+        <a href="/search">SEARCH QUOTES!</a>
         <a href="/#" className="icon" onClick={handleClick}>
           <i className="fa fa-bars"></i>
         </a>
