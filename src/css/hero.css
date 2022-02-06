@@ -6,9 +6,7 @@
 .hero {
   z-index: 1;
   position: relative;
-  background-image: url("../img/sky.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: linear-gradient(to top, #55b5e9 75%, #ffffff);
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -16,11 +14,58 @@
 
 .hero-top-content {
   height: 100vh;
+  width: 100vw;
   position: relative;
 }
 
+.clouds-wrapper {
+  position: relative;
+  z-index: 10;
+}
+
+.cloud-1 {
+  width: 60%;
+  position: absolute;
+  top: 0;
+  right: -60%;
+}
+
+.cloud-2 {
+  width: 50%;
+  position: absolute;
+  top: 50vh;
+  left: -55%;
+}
+
+.cloud-3 {
+  width: 20%;
+  position: absolute;
+  top: 40vh;
+  right: -60%;
+}
+
+.cloud-4 {
+  width: 20%;
+  position: absolute;
+  top: 30vh;
+  left: -55%;
+}
+
+.cloud-5 {
+  width: 10%;
+  position: absolute;
+  top: 10vh;
+  right: -60%;
+}
+
+.cloud-6 {
+  width: 10%;
+  position: absolute;
+  top: 40vh;
+  left: -55%;
+}
+
 .bart {
-  z-index: -1;
   position: absolute;
   top: 150%;
   left: 30%;
@@ -32,6 +77,7 @@
   position: absolute;
   right: -10px;
   bottom: 0;
+  z-index: 11;
 }
 
 .hero-text {
